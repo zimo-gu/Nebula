@@ -22,7 +22,7 @@ export function DiscordPage() {
               {t("discord.sub")}
             </span>
           </div>
-          <a href="https://discord.gg/unblocker" className="p-6">
+          <a href="discord.com" className="p-6">
             <button className="font-roboto h-14 w-56 rounded-2xl border border-input-border-color bg-input p-2 text-center text-xl text-input-text placeholder:text-input-text focus:outline-none">
               {t("discord.button1")}
             </button>
@@ -31,7 +31,7 @@ export function DiscordPage() {
             onClick={() => {
               window.location.href =
                 window.__uv$config.prefix +
-                window.__uv$config.encodeUrl("https://discord.gg/unblocker");
+                window.__uv$config.encodeUrl("discord.com");
             }}
             className="p-6"
           >
