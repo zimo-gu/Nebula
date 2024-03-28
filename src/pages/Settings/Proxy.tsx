@@ -7,16 +7,28 @@ import ProxyInput from "./ProxyInput";
 import { useTranslation } from "react-i18next";
 import TransportDropdown from "./transportDropdown";
 
+import RammerheadLogo from "../../assets/rammerhead.png";
+import UltravioletLogo from "../../assets/ultraviolet.png";
+import AutomaticLogo from "../../assets/automatic.png";
+import DynamicLogo from "../../assets/dynamic.png";
+import GoogleLogo from "../../assets/google.png";
+import BingLogo from "../../assets/bing.png";
+import DuckDuckGoLogo from "../../assets/ddg.png";
+
 const Proxy = ({ id, active }) => {
   const { t } = useTranslation();
   const transport = localStorage.getItem("transport") || "libcurl";
   const proccy = localStorage.getItem("proxy") || "automatic";
 
   const engines = [
-    { id: "automatic", label: t("settings.proxy.automatic") },
-    { id: "ultraviolet", label: "Ultraviolet" },
-    { id: "rammerhead", label: "Rammerhead" },
-    { id: "dynamic", label: "Dynamic" }
+    {
+      id: "automatic",
+      label: t("settings.proxy.automatic"),
+      image: AutomaticLogo
+    },
+    { id: "ultraviolet", label: "Ultraviolet", image: UltravioletLogo },
+    { id: "rammerhead", label: "Rammerhead", image: RammerheadLogo },
+    { id: "dynamic", label: "Dynamic", image: DynamicLogo }
   ];
 
   const proxyModes = [
@@ -26,9 +38,17 @@ const Proxy = ({ id, active }) => {
   ];
 
   const searchEngines = [
-    { id: "https://duckduckgo.com/?q=%s", label: "DuckDuckGo" },
-    { id: "https://google.com/search?q=%s", label: "Google" },
-    { id: "https://bing.com/search?q=%s", label: "Bing" }
+    {
+      id: "https://duckduckgo.com/?q=%s",
+      label: "DuckDuckGo",
+      image: DuckDuckGoLogo
+    },
+    {
+      id: "https://google.com/search?q=%s",
+      label: "Google",
+      image: GoogleLogo
+    },
+    { id: "https://bing.com/search?q=%s", label: "Bing", image: BingLogo }
   ];
 
   const wispUrl =
@@ -103,20 +123,20 @@ const Proxy = ({ id, active }) => {
         {transport !== "bare" && (
           <div className="flex h-64 w-80 flex-col flex-wrap content-center items-center rounded-lg border border-input-border-color bg-lighter p-2 text-center">
             <div className="p-2 text-3xl font-bold text-input-text">
-              Wisp Server
+              {t("settings.wisp.title")}
             </div>
             <div className="text-md p-4 font-bold text-input-text">
-              Enter the url of a Wisp server
+              {t("settings.wisp.subtitle")}
             </div>
             <WispInput placeholder={wispUrl} />
           </div>
         )}
         <div className="flex h-64 w-80 flex-col flex-wrap content-center items-center rounded-lg border border-input-border-color bg-lighter p-2 text-center">
           <div className="p-2 text-3xl font-bold text-input-text">
-            Transport
+            {t("settings.transport.title")}
           </div>
           <div className="text-md p-4 font-bold text-input-text">
-            Select the transport to use
+            {t("settings.transport.desc")}
           </div>
           <TransportDropdown
             storageKey="transport"

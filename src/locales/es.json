@@ -24,7 +24,8 @@
       "proxy": "Proxy",
       "tab": "Pestaña",
       "custom": "Personalización",
-      "misc": "Misc"
+      "misc": "Misc",
+      "credits": "Créditos"
     },
     "proxy": {
       "title": "Proxy",
@@ -56,9 +57,21 @@
       "subtitle": "Pon tu url de tu bare server",
       "select": "Seleccionar"
     },
+    "wisp": {
+      "title": "Servidor Wisp",
+      "subtitle": "Introduzca la URL de un servidor Wisp",
+      "select": "Seleccionar"
+    },
+    "transport": {
+      "title": "Transporte",
+      "desc": "Seleccione el transporte que desea utilizar"
+    },
     "theme": {
       "title": "Mirar",
-      "subtitle": "Elige una mirada para que tus ojos no nos odienn"
+      "subtitle": "Elige una mirada para que tus ojos no nos odienn",
+      "particles": "Partículas",
+      "particlesDesc": "Elige un fondo de pantalla de partículas",
+      "particlesNone": "Ninguna"
     },
     "httpProxy": {
       "title": "Proxy HTTP (avanzado)",
@@ -79,6 +92,7 @@
   "themes": {
     "main": "Por defecto",
     "hacker": "Hacker",
+    "crismas": "Naidad🐴🎄",
     "catppuccinMocha": "Catppuccin Mocha",
     "catppuccinMacchiato": "Catppuccin Macchiato",
     "catppuccinFrappe": "Catppuccin Frappe",
@@ -116,5 +130,10 @@
       "q": "Nebula es lento.",
       "a": "Es posible que estés conectado al servidor incorrecto. Verifica el servidor bare al que estás conectado y asegúrate de que sea el país más cercano a ti."
     }
+  },
+  "credits": {
+    "devs": "Desarrolladores del sitio",
+    "jpTranslators": "Traductores de japonés",
+    "esTranslators": "Traductores de español"
   }
 }
